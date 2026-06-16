@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta charset="UTF-8">
+<title>Tetris</title>
+
+<style>
+
+body{
+    text-align:center;
+    font-family:Arial,sans-serif;
+}
+
+canvas{
+    border:2px solid black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>俄罗斯方块</h1>
+
+<canvas id="game" width="300" height="600"></canvas>
+
+<script>
+
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "blue";
+ctx.fillRect(50,50,30,30);
+
+</script>
+
+</body>
+
+</html>
