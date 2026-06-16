@@ -31,6 +31,7 @@ canvas{
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
+let x = 100;
 let y = 0;
 
 function draw(){
@@ -38,11 +39,23 @@ function draw(){
     ctx.clearRect(0,0,300,600);
 
     ctx.fillStyle = "blue";
-    ctx.fillRect(100,y,30,30);
+    ctx.fillRect(x,y,30,30);
 
     y++;
 
 }
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "a"){
+        x -= 20;
+    }
+
+    if(event.key === "d"){
+        x += 20;
+    }
+
+});
 
 setInterval(draw,20);
 </script>
